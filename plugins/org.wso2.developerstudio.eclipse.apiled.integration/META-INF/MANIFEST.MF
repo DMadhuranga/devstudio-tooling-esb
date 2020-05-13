@@ -17,7 +17,10 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.m2e.core.ui;bundle-version="1.8.3"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Import-Package: org.apache.commons.lang3;version="3.1.0",
+Import-Package: com.google.gson,
+ com.google.gson.internal.bind.util;version="2.7.0",
+ com.google.gson.stream;version="2.7.0",
+ org.apache.commons.lang3;version="3.1.0",
  org.apache.commons.lang3.text;version="3.1.0",
  org.apache.synapse.commons.staxon.core.json.stream.impl,
  org.eclipse.core.expressions,

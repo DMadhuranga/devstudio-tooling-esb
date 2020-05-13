@@ -20,6 +20,7 @@ package org.wso2.developerstudio.eclipse.apiled.integration;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+import org.wso2.developerstudio.eclipse.apiled.integration.handler.api.RegistriesApi;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -36,6 +37,7 @@ public class Activator extends AbstractUIPlugin {
      * The constructor
      */
     public Activator() {
+//        ApiClient a = new ApiClient();
     }
 
     /*

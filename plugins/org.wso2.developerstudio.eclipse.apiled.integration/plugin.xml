@@ -30,4 +30,29 @@
         <image id="org.wso2.developerstudio.eclipse.apim.project.natureImage" 
 		natureId="org.wso2.developerstudio.eclipse.apim.project.nature" icon="icons/apim_project.png" />
     </extension>
+    
+    <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.wso2.developerstudio.eclipse.apiled.integration.utils.Handler"
+            id="org.wso2.developerstudio.eclipse.apim.commands.toolbar.Configure"
+            name="Hello">
+      </command>
+   </extension>
+    
+    <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="de.vogella.rcp.intro.commands.toolbar.toolbar1">
+            <command
+                  commandId="org.wso2.developerstudio.eclipse.apim.commands.toolbar.Configure"
+                  icon="icons/apim_project.gif"
+                  label="Say Hello"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+  </extension>
 </plugin>
