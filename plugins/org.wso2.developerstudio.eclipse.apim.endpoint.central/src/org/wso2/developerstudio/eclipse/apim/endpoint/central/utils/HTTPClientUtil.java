@@ -377,6 +377,14 @@ public class HTTPClientUtil {
     private static String getErrorMessage(String response) {
         JsonParser parser = new JsonParser();
         JsonElement jsonResponse = parser.parse(response);
-        return jsonResponse.getAsJsonObject().get("description").getAsString();
+        JsonElement errorMessageElement = jsonResponse.getAsJsonObject().get("description");
+        if (errorMessageElement != null) {
+            return errorMessageElement.getAsString();
+        }
+        errorMessageElement = jsonResponse.getAsJsonObject().get("error_description");
+        if (errorMessageElement != null) {
+            return errorMessageElement.getAsString();
+        }
+        return response;
     }
 }
